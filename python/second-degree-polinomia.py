@@ -1,9 +1,9 @@
 import math
 
 # Coefficients
-a = 1
-b = 2
-c = -12
+a = input("a: ")
+b = input("b: ")
+c = input("c: ")
 
 # Discriminant
 discriminant = b**2 - 4*a*c
@@ -17,3 +17,5 @@ else:
     roots = None
 
 print(roots)
+
+input()
