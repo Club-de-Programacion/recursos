@@ -44,7 +44,7 @@
         },
         {
             "name": "fmd.python.fmd",
-            "begin": "/python",
+            "begin": "/code-",
             "end": "/exit"
         },
         {

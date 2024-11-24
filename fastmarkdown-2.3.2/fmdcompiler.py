@@ -18,7 +18,7 @@ def fmdtomd(filename):
         data = data.replace("/done", "- [X]") # Caja de verificación con check
         return data
     def replace_code(data):
-        data = data.replace("/python", "```python") # Inicio de código Python
+        data = data.replace("/code-", "```") # Inicio de código Python
         data = data.replace("/exit", "```") # Fin de código
         data = data.replace("/ipy", "`") # Código en línea
         data = data.replace("/__", "$$") # Matemáticas en bloque
@@ -58,6 +58,6 @@ if __name__ == "__main__":
         with open(md_file, 'w', encoding="utf-8") as file:
             file.write(fmdtomd(fmd_file))
         print("Conversion done!")
-        input("")
     except Exception as e:
         print(F"Error during conversion: \n{e}")
+    input("")
