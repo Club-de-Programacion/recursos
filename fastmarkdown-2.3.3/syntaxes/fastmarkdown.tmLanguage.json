@@ -8,7 +8,8 @@
                 { "include": "#italic" },
                 { "include": "#strikethrough" },
                 { "include": "#superscript" },
-                { "include": "#subscript" }
+                { "include": "#subscript" },
+                { "include": "#scape"}
             ],
             "end": "'"
         },
@@ -19,7 +20,8 @@
                 { "include": "#bold" },
                 { "include": "#strikethrough" },
                 { "include": "#superscript" },
-                { "include": "#subscript" }
+                { "include": "#subscript" },
+                { "include": "#scape"}
             ],
             "end": "//"
         },
@@ -30,7 +32,8 @@
                 { "include": "#bold" },
                 { "include": "#italic" },
                 { "include": "#superscript" },
-                { "include": "#subscript" }
+                { "include": "#subscript" },
+                { "include": "#scape"}
             ],
             "end": "/-"
         },
@@ -43,7 +46,7 @@
             "match": "/S"
         },
         {
-            "name": "fmd.python.fmd",
+            "name": "fmd.code.fmd",
             "begin": "/code-",
             "end": "/exit"
         },
@@ -57,15 +60,16 @@
             "end": "<<<#"
         },
         {
-            "name": "fmd.ipy.fmd",
-            "begin": "/ipy",
-            "end": "/ipy"
+            "name": "fmd.cd.fmd",
+            "begin": "/cd",
+            "end": "/cd"
         },
         {
             "name": "fmd.h1.fmd",
             "begin": "/h1",
             "patterns": [
-                { "include": "#newline" }
+                { "include": "#newline" },
+                { "include": "#scape"}
             ],
             "end": "$"
         },
@@ -73,7 +77,8 @@
             "name": "fmd.h2.fmd",
             "begin": "/h2",
             "patterns": [
-                { "include": "#newline" }
+                { "include": "#newline" },
+                { "include": "#scape"}
             ],
             "end": "$"
         },
@@ -81,7 +86,8 @@
             "name": "fmd.h3.fmd",
             "begin": "/h3",
             "patterns": [
-                { "include": "#newline" }
+                { "include": "#newline" },
+                { "include": "#scape"}
             ],
             "end": "$"
         },
@@ -100,7 +106,8 @@
                 { "include": "#bold" },
                 { "include": "#italic" },
                 { "include": "#strikethrough" },
-                { "include": "#ipy" }
+                { "include": "#ipy" },
+                { "include": "#scape"}
             ],
             "end": "$"
         },
@@ -129,7 +136,8 @@
             "begin": "/_",
             "patterns": [
                 { "include": "#superscript" },
-                { "include": "#subscript" }
+                { "include": "#subscript" },
+                { "include": "#scape"}
             ],
             "end": "/_"
         },
@@ -138,16 +146,30 @@
             "begin": "/__",
             "patterns": [
                 { "include": "#superscript" },
-                { "include": "#subscript" }
+                { "include": "#subscript" },
+                { "include": "#scape"}
             ],
             "end": "/__"
+        },
+        {
+            "name": "fmd.pbba.fmd",
+            "match": "/pbba"
+        },
+        {
+            "name": "fmd.scape.fmd",
+            "match": "¬"
+        },
+        {
+            "begin": "/I",
+            "end": "/i",
+            "name": "fmd.index.fmd"
         }
     ],
     "repository": {
-        "ipy": {
-            "name": "fmd.ipy.fmd",
-            "begin": "/ipy",
-            "end": "/ipy"
+        "cd": {
+            "name": "fmd.cd.fmd",
+            "begin": "/cd",
+            "end": "/cd"
         },
         "imath": {
             "name": "fmd.imath.fmd",
@@ -180,6 +202,10 @@
         "newline": {
             "name": "fmd.new.fmd",
             "match": "/n"
+        },
+        "scape": {
+            "name": "fmd.scape.fmd",
+            "match": "¬"
         }
     }
 }

@@ -20,7 +20,7 @@ def fmdtomd(filename):
     def replace_code(data):
         data = data.replace("/code-", "```") # Inicio de código Python
         data = data.replace("/exit", "```") # Fin de código
-        data = data.replace("/ipy", "`") # Código en línea
+        data = data.replace("/cd", "`") # Código en línea
         data = data.replace("/__", "$$") # Matemáticas en bloque
         data = data.replace("/_", "$") # Matemáticas en línea
         return data
@@ -38,6 +38,12 @@ def fmdtomd(filename):
         data = data.replace("/S", "^") # Superscript
         data = data.replace("'", "**") # Bold
         return data
+    def replace_special(data):
+        data = data.replace("/pbba", "<pbba>") # page-break-before: avoid
+        data = data.replace("/I", "<index>") # Index page number start
+        data = data.replace("/i", "</index>") # Index page number end
+        data = data.replace("¬", "") # Function scape
+        return data
     
     with open(filename, 'r', encoding="utf-8") as file:
         content = file.read()
@@ -48,6 +54,7 @@ def fmdtomd(filename):
         content = replace_code(content)
         content = add_images(content)
         content = replace_style(content)
+        content = replace_special(content)
     return content
 
 if __name__ == "__main__":

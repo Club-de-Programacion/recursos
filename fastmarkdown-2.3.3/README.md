@@ -40,13 +40,13 @@ Ya tienes instalada la extensión. Para poder usarla, necesitarás copiar este a
                 }
             },
             {
-                "scope": "fmd.python.fmd",
+                "scope": "fmd.code.fmd",
                 "settings": {
                     "foreground": "#9494ff" // Color para bloques de código
                 }
             },
             {
-                "scope": "fmd.ipy.fmd",
+                "scope": "fmd.cd.fmd",
                 "settings": {
                     "foreground": "#9494ff" // Color para bloques de código
                 }
@@ -137,6 +137,24 @@ Ya tienes instalada la extensión. Para poder usarla, necesitarás copiar este a
                 "scope": "fmd.new.fmd", // Color para nuevo párrafo
                 "settings": {
                     "foreground": "#6b6b6b" // Color para nuevo párrafo
+                }
+            },
+            {
+                "scope": "fmd.scape.fmd", // Color para scape
+                "settings": {
+                    "foreground": "#111111" // Color para scape
+                }
+            },
+            {
+                "scope": "fmd.index.fmd", // Color para número de página
+                "settings": {
+                    "foreground": "#ff0000" // Color para número de página
+                }
+            },
+            {
+                "scope": "fmd.pbba.fmd", // Color para pbba
+                "settings": {
+                    "foreground": "#0066aa" // Color para pbba
                 }
             }
         ]
