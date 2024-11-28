@@ -156,6 +156,12 @@ Ya tienes instalada la extensión. Para poder usarla, necesitarás copiar este a
                 "settings": {
                     "foreground": "#0066aa" // Color para pbba
                 }
+            },
+            {
+                "scope": "fmd.break.fmd", // Color para break
+                "settings": {
+                    "foreground": "#999999" // Color para break
+                }
             }
         ]
     },

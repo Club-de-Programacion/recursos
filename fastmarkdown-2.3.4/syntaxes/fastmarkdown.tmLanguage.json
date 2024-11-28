@@ -163,6 +163,10 @@
             "begin": "/I",
             "end": "/i",
             "name": "fmd.index.fmd"
+        },
+        {
+            "name": "fmd.break.fmd",
+            "match": "/br"
         }
     ],
     "repository": {

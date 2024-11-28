@@ -42,6 +42,7 @@ def fmdtomd(filename):
         data = data.replace("/pbba", "<pbba>") # page-break-before: avoid
         data = data.replace("/I", "<index>") # Index page number start
         data = data.replace("/i", "</index>") # Index page number end
+        data = data.replace("/br", "<br>") # Line break
         data = data.replace("¬", "") # Function scape
         return data
     

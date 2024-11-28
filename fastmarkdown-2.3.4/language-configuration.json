@@ -61,7 +61,11 @@
         "offSide": false,
         "markers": {
             "start": "/h2",
-            "end": "$"
+            "end": "/h2",
+            "markers": {
+                "start": "/h3",
+                "end": "/h3"
+            }
         }
     }
 }
